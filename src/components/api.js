@@ -5,3 +5,10 @@ export const GetMalls = async (type) => {
         url: '/mall/type/' + type
     })
 }
+
+
+export const GetMallDetail = async (type, id) => {
+    return await GET({
+        url: '/mall/' + type + '/' + id,
+    })
+}
