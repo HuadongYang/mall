@@ -12,11 +12,11 @@
         <div class="des-class">{{ item.description }}</div>
       </div>
     </div>
-
+    
     <el-dialog title="" :visible.sync="dialogVisible" width="40%">
       <el-carousel indicator-position="outside">
         <el-carousel-item v-for="(url, index) in urls" :key="index">
-          <img :src="url" alt="" style="height: 100%; width: 100%" />
+          <img :src="url" alt="" style="height:100%;width:100%" />
         </el-carousel-item>
       </el-carousel>
       <div style="color: red; font-size: 24px">￥{{ selectedMall.price }}</div>
@@ -71,6 +71,7 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 50px;
+  width: 200px;
 }
+
 </style>

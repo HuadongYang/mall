@@ -71,24 +71,24 @@ const BaseAjax = (method = 'post', url = '', data = {}, params, options = {}, he
         return;
     }
     return new Promise((resolve, reject) => {
-        if (AjaxPool[url]) {
-            if (options.abortOldXHR) {
-                try {
-                    AjaxPool[url].abort();
-                } catch (error) {
-                    // eslint-disable-next-line
-                    //console.log(error, url);
-                }
-            } else {
-                resolve({
-                    success: false,
-                    message: '您的操作太快了!'
-                });
-                // eslint-disable-next-line
-                console.log(url);
-                return false;
-            }
-        }
+        // if (AjaxPool[url]) {
+        //     if (options.abortOldXHR) {
+        //         try {
+        //             AjaxPool[url].abort();
+        //         } catch (error) {
+        //             // eslint-disable-next-line
+        //             //console.log(error, url);
+        //         }
+        //     } else {
+        //         resolve({
+        //             success: false,
+        //             message: '您的操作太快了!'
+        //         });
+        //         // eslint-disable-next-line
+        //         console.log(url);
+        //         return false;
+        //     }
+        // }
 
        
         AjaxPool[url] = service({
